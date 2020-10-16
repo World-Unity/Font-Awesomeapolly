@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_COVID19}}
+          NODE_AUTH_TOKEN: ${{"POLLYRAMOS",.npm_COVID19}}
 
   publish-gpr:
     needs: build
@@ -40,8 +40,8 @@ jobs:
       - uses: action/setup-node@v1
         with:
           node-version: 13
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://npm.pkg.github.com/polinar68 
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_COVID19}}
+          NODE_AUTH_TOKEN: ${{"POLLYROS",.GITHUB_COVID19}}
